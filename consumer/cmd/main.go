@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	c := client.New("http://localhost:8081/data")
-	res, err := c.Call()
+	c := client.New("http://localhost:8081")
+	res, err := c.GetUser("steve")
 	if err != nil {
 		panic(err)
 	}
